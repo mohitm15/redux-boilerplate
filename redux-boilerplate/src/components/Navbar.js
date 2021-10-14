@@ -1,11 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { bindActionCreators } from 'redux';
+import { actionCreators } from '../state/index';
 
 const Navbar = () => {
 
   //useSeletor is used to access the state variable
   const amount = useSelector((state) => state.amount);
   //amountReducer will change its value
+
+  const darkmode = useSelector((state) => state.darkmode);// to access the state variables in UI
+  const dispatch = useDispatch();//to dispacth the action creator functions
+  const {enableDarkMode} = bindActionCreators(actionCreators, dispatch);
+
 
   return (
     <div>
@@ -40,7 +47,10 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <button className="btn btn-primary">Your Balance: {amount}</button>
+              <button className="btn btn-secondary mx-2" onClick={()=>{darkmode === 'OFF'?enableDarkMode('ON'):enableDarkMode('OFF')}}>Dark Mode : {darkmode}</button>
+            </div>
+          <div>
+            <button className="btn btn-primary mx-1">Your Balance: {amount}</button>
           </div>
         </div>
       </nav>

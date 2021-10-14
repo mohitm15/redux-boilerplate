@@ -18,3 +18,21 @@ export const withdrawMoney = (amount) => {
         })
     }
 }
+
+export const enableDarkMode = (darkMode) => {
+    return (dispatch) => {
+        dispatch ({
+            type:'darkmode',
+            payload: darkMode
+        })
+    }
+}
+
+export const enableLightMode = (lightMode) => {
+    return (dispatch) => {
+        dispatch({
+            type:'lightmode',
+            payload: lightMode
+        })
+    }
+}
