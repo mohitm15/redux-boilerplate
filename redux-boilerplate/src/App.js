@@ -7,7 +7,9 @@ function App() {
 
 //to access the state variables in UI
 const darkmode = useSelector(state => state.darkmode);
+
 let darkmodeStyle = {}
+
 if(darkmode === 'ON') {
     darkmodeStyle = {
         backgroundColor:'#2d2d2d',
