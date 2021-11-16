@@ -23,17 +23,20 @@ const Shop = () => {
         <>
         <div className="container p-3"> 
         <div className={`alert alert-${darkmode === 'ON'? 'dark':'success'}` } role="alert">
-            <h2>Mohit Bank of India</h2>
+            <h2>Redux BoilerPlate</h2>
         </div>
-            <h3 className="my-5">Deposit/Withdraw Money</h3>
+            <h3 className="my-5">Simple Starter template for redux-store</h3>
             {/* <button className="btn btn-success mx-2" onClick={()=>dispatch(actionCreators.depositMoney(100))}>+</button>
             You Balance
             <button className="btn btn-danger mx-2" onClick={()=>dispatch(actionCreators.withdrawMoney(100))}>-</button> */}
-            <button className="btn btn-success mx-2" onClick={()=>(depositMoney(100))}>+</button>
-            You Balance - Rs. {balance}
-            <button className="btn btn-danger mx-2" onClick={()=>(withdrawMoney(100))}>-</button>
             <div className="container my-5">
-            DarkMode = {darkmode}
+                <h1 className="display-1">This is {darkmode === "ON" ? "DarkMode" : "LightMode"}</h1>
+            </div>
+
+            <div className="container d-flex">
+                <button className="btn-lg btn-success mx-4" onClick={()=>(depositMoney(1))}> + </button>
+                    <h1 className="display-6">You Count Value = {balance} </h1>
+                <button className="btn-lg btn-danger mx-4" onClick={()=>(withdrawMoney(1))}> - </button>
             </div>
         </div>
         </>

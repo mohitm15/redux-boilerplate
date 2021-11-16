@@ -19,7 +19,7 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
-            Mohit Bank of India
+            Redux BoilerPlate
           </a>
           <button
             className="navbar-toggler"
@@ -47,10 +47,14 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-              <button className="btn btn-secondary mx-2" onClick={()=>{darkmode === 'OFF'?enableDarkMode('ON'):enableDarkMode('OFF')}}>Dark Mode : {darkmode}</button>
+             
+                <div className="form-check form-switch mx-4">
+                  <input className="form-check-input" onClick={()=>{darkmode === 'OFF'?enableDarkMode('ON'):enableDarkMode('OFF')}} type="checkbox" id="flexSwitchCheckDefault" />
+                  <label className="form-check-label text-light" htmlFor="flexSwitchCheckDefault">Darkmode</label>
+                </div>
             </div>
           <div>
-            <button className="btn btn-primary mx-1">Your Balance: {amount}</button>
+            <button className="btn btn-info mx-1">CountValue : {amount}</button>
           </div>
         </div>
       </nav>
