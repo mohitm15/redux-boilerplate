@@ -6,7 +6,7 @@ import { actionCreators } from '../state/index';
 const Navbar = () => {
 
   //useSeletor is used to access the state variable
-  const amount = useSelector((state) => state.amount);
+  const countValue = useSelector((state) => state.countValue);
   //amountReducer will change its value
 
   const darkmode = useSelector((state) => state.darkmode);// to access the state variables in UI
@@ -54,7 +54,7 @@ const Navbar = () => {
                 </div>
             </div>
           <div>
-            <button className="btn btn-info mx-1">CountValue : {amount}</button>
+            <button className="btn btn-info mx-1">CountValue : {countValue}</button>
           </div>
         </div>
       </nav>

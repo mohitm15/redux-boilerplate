@@ -1,20 +1,20 @@
 // these are the actions that are interded to make change
 
-export const depositMoney = (amount) => {
+export const increaseCount = (countValue) => {
     return (dispatch) => {
         dispatch ({
-            type: 'deposit',
-            payload: amount
+            type: 'increase',
+            payload: countValue
         })
     }
 }
 
 
-export const withdrawMoney = (amount) => {
+export const decreaseCount = (countValue) => {
     return (dispatch) => {
         dispatch ({
-            type: 'withdraw',
-            payload: amount
+            type: 'decrease',
+            payload: countValue
         })
     }
 }

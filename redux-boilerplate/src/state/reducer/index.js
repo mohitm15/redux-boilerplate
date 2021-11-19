@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
-import amountReducer from './amountReducer';
+import countValueReducer from './countReducer';
 import darkmodeReducer from './darkmodeReducer';
 //import anotherReducer from './anotherReducer';
 
 
 //combinnig all the reducers here
 const reducer = combineReducers({
-    amount: amountReducer,
+    countValue: countValueReducer,
     darkmode: darkmodeReducer
     //another: anotherReducer
 })

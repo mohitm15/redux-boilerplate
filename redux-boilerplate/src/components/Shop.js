@@ -5,8 +5,8 @@ import { actionCreators } from '../state/index';
 
 const Shop = () => {
     const dispatch = useDispatch(); //to dispacth the action creator functions
-    const balance = useSelector(state => state.amount) // to access the state variables in UI
-    const {depositMoney, withdrawMoney} = bindActionCreators(actionCreators,dispatch);
+    const balance = useSelector(state => state.countValue) // to access the state variables in UI
+    const {increaseCount, decreaseCount} = bindActionCreators(actionCreators,dispatch);
 
     //to access the state variables in UI
     const darkmode = useSelector(state => state.darkmode);
@@ -26,17 +26,17 @@ const Shop = () => {
             <h2>Redux BoilerPlate</h2>
         </div>
             <h3 className="my-5">Simple Starter template for redux-store</h3>
-            {/* <button className="btn btn-success mx-2" onClick={()=>dispatch(actionCreators.depositMoney(100))}>+</button>
+            {/* <button className="btn btn-success mx-2" onClick={()=>dispatch(actionCreators.increaseCount(100))}>+</button>
             You Balance
-            <button className="btn btn-danger mx-2" onClick={()=>dispatch(actionCreators.withdrawMoney(100))}>-</button> */}
+            <button className="btn btn-danger mx-2" onClick={()=>dispatch(actionCreators.decreaseCount(100))}>-</button> */}
             <div className="container my-5">
                 <h1 className="display-1">This is {darkmode === "ON" ? "DarkMode" : "LightMode"}</h1>
             </div>
 
             <div className="container d-flex">
-                <button className="btn-lg btn-success mx-4" onClick={()=>(depositMoney(1))}> + </button>
+                <button className="btn-lg btn-success mx-4" onClick={()=>(increaseCount(1))}> + </button>
                     <h1 className="display-6">You Count Value = {balance} </h1>
-                <button className="btn-lg btn-danger mx-4" onClick={()=>(withdrawMoney(1))}> - </button>
+                <button className="btn-lg btn-danger mx-4" onClick={()=>(decreaseCount(1))}> - </button>
             </div>
         </div>
         </>
